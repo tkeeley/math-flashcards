@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="windows-1252">
+  
+  <title>Math Flashcards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     font-weight: bolder; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.grid > div:hover {
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;   
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+  }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid > div {
+  display: flex; 
+  flex-basis: calc(25% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+.grid > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  }
+
+@media only screen and (max-width: 700px) {
+    .grid > div {
+        flex-basis: calc(50% - 40px);  
+    }
+}
+.box > a > div {
+    text-align: center;
+    font-size: 22px;
+}
+
+.box { margin: 20px; 
+    box-shadow: 3px 3px 5px 1px #000000;
+-webkit-box-shadow: 3px 3px 5px 1px #000000;
+-moz-box-shadow: 3px 3px 5px 1px #000000;
+}
+
+.box img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+ </style>
+</head>
+<body>
+    <h1>Choose your challenge below</h1>
+    <div class="grid">
+        <div class="box box1"><a href="add/index.html"><img src="images/add.png"><div>Addition</div></a></div>
+        <div class="box box2"><a href="subtract/index.html"><img src="images/subtract.png"><div>Subtraction</div></a></div>
+        <div class="box box3"><a href="multiply/index.html"><img src="images/multiply.png"><div>Multiplication</div></a></div>
+        <div class="box box4"><a href="divide/index.html"><img src="images/divide.png"><div>Division</div></a></div>
+      </div>
+      <footer> 
+          <p>Built by Tim Keeley at</p>
+      <a href="https://www.cupocode.com"
+        ><img
+          src="https://www.cupocode.com/img/cupocodebrand.png"
+          width="120px"
+          alt="Cup O Code"
+      /></a>
+      </footer>
+    </body>
+</html>
