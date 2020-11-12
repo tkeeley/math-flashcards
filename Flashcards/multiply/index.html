@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head><meta charset="windows-1252">
+<head><meta charset="sUTF-8">
   
   <title>Math Flashcards Multiply</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
   </div>
 
   <div class="answer">
-    <input id="answer-text" onkeydown="getUserAnswer(this)" placeholder="Answer">
+    <input type="number" id="answer-text" onkeydown="getUserAnswer(this)" placeholder="Answer">
   </div>
 
   <div class="score">
@@ -66,9 +66,12 @@ function checkAnswer(answer, userAnswer) {
     correctCount += 1;
     correct.innerHTML = correctCount;
     resetNumbers();
+    document.getElementById('answer-text').setAttribute('placeholder','Answer');
   } else {
     incorrectCount += 1;
     incorrect.innerHTML = incorrectCount;
+    userInput.value = "";
+    document.getElementById('answer-text').setAttribute('placeholder','Try Again');
   }
 }
   </script>
